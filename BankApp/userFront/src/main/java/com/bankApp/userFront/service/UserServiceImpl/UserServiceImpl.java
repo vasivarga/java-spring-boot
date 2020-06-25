@@ -34,9 +34,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private AccountService accountService;
 
-    public void save(User user) {
-        userDao.save(user);
-    }
+//    public void save(User user) {
+//        userDao.save(user);
+//    }
 
     public User findByUsername(String username) {
         return userDao.findByUsername(username);
@@ -94,12 +94,11 @@ public class UserServiceImpl implements UserService {
         return false;
     }
 
-    public User saveUser(User user) {
-        return userDao.save(user);
+    public User save(User user) {
+         return userDao.save(user);
     }
 
-    public List<User> findUserList() {
-        return userDao.findAll();
+    public List<User> findUserList() { return userDao.findAll();
     }
 
     public void enableUser(String username) {
